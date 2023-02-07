@@ -14,8 +14,7 @@ arg_parser.add_argument('--view-img', action='store', type=bool, required=False,
 args = arg_parser.parse_args()
 
 #example
-#RTSP_URL = 'rtsp://admin:altrsns007@192.168.3.168/Streaming/channels/3101'
-#RTSP_URL = 'rtsp://admin:Ab123456@192.168.100.240:554/Streaming/channels/101'
+#RTSP_URL = 'rtsp://admin:admin12345@192.168.0.3/Streaming/channels/101'
 
 RTSP_URL = 'rtsp://'+str(args.cam_user)+':'+str(args.password)+'@'+str(args.ip)+'/Streaming/channels/'+str(args.num)
 
