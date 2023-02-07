@@ -1,19 +1,18 @@
 ## RTSP Stream Capture from IP Camera using OpenCV & Video Recording tool
 
-
 IP cameras supports Real Time Streaming Protocol (RTSP) to control audio and video streaming. This is an example how to capture RTSP stream from IP camera using OpenCV and Python.
 
 ## Requirements
 
-opencv-python
-argparse
-datetime
+- opencv-python
+- argparse
+- datetime
 
 ## Usage
 
+###Example 
+``python rtsp_record.py --cam_user admin --password Ab123456 --ip 192.168.100.240:554 --num 402 --view-img True``
 ``` Running from terminal 
-python rtsp_record.py --cam_user admin --password Ab123456 --ip 192.168.100.240:554 --num 402 --view-img True
-
 python rtsp_record.py 
 
 --cam_user      Rtsp Cam Username, default= admin
