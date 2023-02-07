@@ -10,7 +10,7 @@ IP cameras supports Real Time Streaming Protocol (RTSP) to control audio and vid
 
 ## Usage
 
-Example: ``python rtsp_record.py --cam_user admin --password Ab123456 --ip 192.168.100.240:554 --num 402 --view-img True``
+Example: ``python rtsp_record.py --cam_user admin --password admin12345 --ip 192.168.0.3:554 --num 101 --view-img True``
 
 ``` Running from terminal 
 python rtsp_record.py 
