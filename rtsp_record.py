@@ -48,8 +48,8 @@ while True:
             video_output.write(frame)
             print("[INFO]: Saving video frames...."+str(frame_count))
         if args.view_img:
-            cv2.namedWindow("RTSP Video Frame", cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)  # allow window resize (Linux)
-            cv2.imshow("RTSP Video Frame", frame)
+            cv2.namedWindow("RTSP Video Frame: Cam "+str(args.num), cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)  # allow window resize (Linux)
+            cv2.imshow("RTSP Video Frame: Cam "+str(args.num), frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             print("[INFO]: Saving video frames stopped!!!..."+str(frame_count))        
