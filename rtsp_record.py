@@ -33,7 +33,7 @@ fps = 20
 if not os.path.exists("recording"):
     os.makedirs("recording")
 
-video_filename = datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p")
+video_filename = datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p")+"cam_"+str(args.num)
 video_codec = cv2.VideoWriter_fourcc(*'XVID')
 video_output = cv2.VideoWriter('recording/'+video_filename+'.mp4', video_codec, fps, (frame_width, frame_height))
 
