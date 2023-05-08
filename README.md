@@ -5,6 +5,8 @@ IP cameras supports Real Time Streaming Protocol (RTSP) to control audio and vid
 ## Requirements
 
 - opencv-python
+- threading
+- datetime
 - argparse
 - datetime
 
