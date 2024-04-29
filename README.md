@@ -1,8 +1,8 @@
 ## RTSP Stream Capture from IP Camera using OpenCV
 
-This example demonstrates how to capture an RTSP stream from an IP camera using OpenCV and Python.
+IP cameras support Real Time Streaming Protocol (RTSP) to control audio and video streaming. This is an example of capturing an RTSP stream from an IP camera using OpenCV and Python.
 
-### Requirements
+## Requirements for Python
 
 - opencv-python
 - threading
@@ -10,34 +10,62 @@ This example demonstrates how to capture an RTSP stream from an IP camera using 
 - argparse
 - datetime
 
-### Usage
+## Requirements for C++
 
-Example:
-```bash
-python rtsp_record.py --cam_username admin --cam_pass admin12345 --ip 192.168.0.3:554 --fps 25 --flip False --num 101 --view-img True
-```
+- cmake 
+- ninja-build 
+- libopencv-dev 
+- libboost-all-dev
 
-### Running from Terminal
+## Python Usage
 
-```bash
+Example: ``python rtsp_video_downloader.py --cam_list 1 4 --fps 1 --end-time 5``
+
+``` 
+Running from terminal 
 python rtsp_record.py 
---cam_username      # Rtsp Cam Username, default= admin
---cam_pass          # Rtsp Cam Password, default= admin12345
---ip                # Rtsp Cam IP Address, default= 192.168.0.3
---num               # Rtsp Cam Channel number, default= 101
---fps               # Frame Rate
---flip              # Flip video, default= False
---save-video        # Rtsp Video-Save, default= True 
---view-img          # OpenCV imshow() View Stream, default= False 
 ```
 
-### Notes
+## C++ Usage
 
-- `--cam_username`: RTSP camera username, default is set to "admin".
-- `--cam_pass`: RTSP camera password, default is set to "admin12345".
-- `--ip`: RTSP camera IP address, default is set to "192.168.0.3".
-- `--num`: RTSP camera channel number, default is set to "101".
-- `--fps`: Frame rate.
-- `--flip`: Flip video, default is set to False.
-- `--save-video`: Option to save the RTSP video, default is set to True.
-- `--view-img`: Option to view the stream using OpenCV's imshow() function, default is set to False.
+Create a CMake Configuration 'CMakeLists.txt' (already present in the project).
+Generate Build Files with CMake 
+
+```
+mkdir build
+cd build
+cmake -G Ninja ..
+
+
+```
+## Build the project with
+
+`ninja`
+
+## Run Your Executable
+
+```
+./rtsp_video_downloader --<cam_list>
+
+```
+
+## Options
+
+```
+--help          Show this help message and exit
+--cam_username  Rtsp Cam Username, default= admin
+--cam_pass      Rtsp Cam Password, default= admin
+--ip            Rtsp Cam Ip-Address, default= 192.168.0.3
+--cam_list      List of cameras for downloading videos
+--fps           Frame Rate
+--live          Live record or Tracks playback record
+--start-time    playback video _start-time
+--end-time      playback video end-time
+--out_dir       save_video_dir
+  ```
+## Developers
+
+* [Md Sajid Ahmed](https://github.com/sajidahmed12)
+## License
+
+Copyright © [AlterSense Developers ](https://altersense.com)
