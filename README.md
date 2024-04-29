@@ -36,7 +36,6 @@ mkdir build
 cd build
 cmake -G Ninja ..
 
-
 ```
 ## Build the project with
 
