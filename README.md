@@ -20,9 +20,9 @@ IP cameras support Real Time Streaming Protocol (RTSP) to control audio and vide
 ## Python Usage
 
 Example: ``python rtsp_video_downloader.py --cam_list 1 4 --fps 1 --end-time 5``
+Running from terminal 
 
 ``` 
-Running from terminal 
 python rtsp_record.py 
 ```
 
@@ -63,9 +63,3 @@ cmake -G Ninja ..
 --end-time      playback video end-time
 --out_dir       save_video_dir
   ```
-## Developers
-
-* [Md Sajid Ahmed](https://github.com/sajidahmed12)
-## License
-
-Copyright © [AlterSense Developers ](https://altersense.com)
